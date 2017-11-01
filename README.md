@@ -13,6 +13,8 @@ At: https://developers.google.com/maps/documentation/javascript/get-api-key
 Go to `index.html` and add
 ``<script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY" async defer></script>``
 
+Open up your terminal and start up ionic serve
+
 ### Step 3
 Go to `home.html` and remove the content between `<ion-content>` and ad `<div #map id="map"></div>
 `
@@ -31,13 +33,19 @@ to
 Add
 	```
 	ionViewDidLoad() {
-		console.log(this.mapRef)
+		console.log(this.mapRef);
 	}
 	```
 to `export class HomePage`
 
-Add showMap() {
-Const location = new google.maps.LatLang(your lat, your lang):
-}
+Go to your browser and check the console if you can find `nativeElement: div#map`
 
-Add  declare var google: any: above the @component
+### Step 5
+Now we need to display the map to do that we are going to add a function
+
+ ```showMap() {
+	 const location = new google.maps.LatLng(59.4024341, 17.946482400000036);
+}
+```
+You will probably get an error for google, to resolve that you need to add
+`declare var google: any;` below the imports.
