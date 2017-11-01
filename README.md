@@ -1,3 +1,5 @@
+# How to add and display a map on your Ionic app
+
 Head over to google maps javascript API
 Select and get a API KEY copy it and save in a file
 We are not using the cordova plugin
