@@ -1,26 +1,29 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+Head over to google maps javascript API
+Select and get a API KEY copy it and save in a file
+We are not using the cordova plugin
 
-## How to use this template
+Go to your app
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+Index.html
+	<script src=”https://maps.googleapis.com/maps/apis/js?key=AIzaSyADuzuOHgmrCJlTlUxIyb_qagTM4MnoBSI async defer“></script>
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Home.html
 
-### With the Ionic CLI:
+Remove content between ion content
+And add
+	<div #map id= “map”></div>
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+Home.ts
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
+To import component add ViewChild, ElementRef
+Add to the export class HomePage
+@ViewChild(‘map’) mapRef: ElementRef;
 
-Then, to run it, cd into `myBlank` and run:
+Add ionViewDidLoad() {
+	console.log(this.mapRef)
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+Add showMap() {
+Const location = new google.maps.LatLang(your lat, your lang):
+}
 
-Substitute ios for android if not on a Mac.
-
+Add  declare var google: any: above the @component
