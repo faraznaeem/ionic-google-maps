@@ -18,18 +18,23 @@ Go to `home.html` and remove the content between `<ion-content>` and ad `<div #m
 `
 
 ### Step 4
-Head over to your `home.ts` adn update your `import { Component, } from '@angular/core';` to `import { Component, ViewChild, ElementRef } from '@angular/core';`
+Head over to your `home.ts` and update your
+`import { Component, } from '@angular/core';`
+to
+`import { Component, ViewChild, ElementRef } from '@angular/core';`
 
  We then need to capture the reference by adding
- `@ViewChild('map') mapRef: ElementRef;` to the `export class HomePage` above the `constructor`
+ `@ViewChild('map') mapRef: ElementRef;`
+ to the `export class HomePage`
+ above the `constructor`
 
-
-To import component add ViewChild, ElementRef
-Add to the export class HomePage
-@ViewChild(‘map’) mapRef: ElementRef;
-
-Add ionViewDidLoad() {
-	console.log(this.mapRef)
+Add
+	```
+	ionViewDidLoad() {
+		console.log(this.mapRef)
+	}
+	```
+to `export class HomePage`
 
 Add showMap() {
 Const location = new google.maps.LatLang(your lat, your lang):
