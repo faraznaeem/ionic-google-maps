@@ -73,6 +73,7 @@ ionViewDidLoad() {
   this.showMap();
 }
 ```
+Add `map: any;` under the export class
 
 If you look at your app on the browser nothing will be shown, you need to head over to your `home.scss` and add
 `#map{height: 100%;}`

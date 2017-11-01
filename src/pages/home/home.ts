@@ -16,15 +16,11 @@ ionViewDidLoad() {
 showMap() {
 
   const location = new google.maps.LatLng(59.4024341, 17.946482400000036);
-
   const options = {center: location, zoom: 15}
-
   const map = new google.maps.Map(this.mapRef.nativeElement, options);
 
   this.addMarker(location, map);
-
   }
-
   addMarker(position, map){
     return new google.maps.Marker({
       position,
