@@ -43,7 +43,8 @@ Go to your browser and check the console if you can find `nativeElement: div#map
 ### Step 5
 Now we need to display the map to do that we are going to add a function
 
- ```showMap() {
+ ```
+ showMap() {
 	 const location = new google.maps.LatLng(59.4024341, 17.946482400000036);
 }
 ```
