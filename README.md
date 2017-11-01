@@ -6,14 +6,15 @@ You should already have an installed Ionic app, we will not go through the insta
 ### Step 1
 Head over to google maps javascript API
 Select and get a API KEY copy it and save in a file
-At:https://developers.google.com/maps/documentation/javascript/get-api-key
+At: https://developers.google.com/maps/documentation/javascript/get-api-key
 
 ### Step 2
 
-Go to your app
+Go to `index.html` and add
+``<script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY" async defer></script>``
 
-Index.html
-	<script src=”https://maps.googleapis.com/maps/apis/js?key=AIzaSyADuzuOHgmrCJlTlUxIyb_qagTM4MnoBSI async defer“></script>
+
+
 
 Home.html
 
