@@ -73,3 +73,43 @@ ionViewDidLoad() {
   this.showMap();
 }
 ```
+
+If you look at your app on the browser nothing will be shown, you need to head over to your `home.scss` and add
+`#map{height: 100%;}`
+
+### Step 6
+Add a Marker
+
+In `home.ts` and `export class HomePage` add
+
+```
+addMarker(position, map){
+	return new google.maps.Marker({
+		position,
+		map
+	});
+}
+```
+
+Then add `this.addMarker(location, this.map);` inside your showMap function.
+
+### Step 7 Refactor
+
+We should change the this.map for more readability.
+
+Change  `this.map = new google.maps.Map(this.mapRef.nativeElement, options);`
+
+to
+
+`const map = new google.maps.Map(this.mapRef.nativeElement, options);
+`
+
+Delete `map: any;` under the export class
+
+and change `this.addMarker(location, this.map);`
+
+to
+
+`this.addMarker(location, map);`
+
+Well done now you should have a map on your ionic app!
