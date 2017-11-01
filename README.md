@@ -17,15 +17,12 @@ Go to `index.html` and add
 Go to `home.html` and remove the content between `<ion-content>` and ad `<div #map id="map"></div>
 `
 
+### Step 4
+Head over to your `home.ts` adn update your `import { Component, } from '@angular/core';` to `import { Component, ViewChild, ElementRef } from '@angular/core';`
 
+ We then need to capture the reference by adding
+ `@ViewChild('map') mapRef: ElementRef;` to the `export class HomePage` above the `constructor`
 
-Home.html
-
-Remove content between ion content
-And add
-	<div #map id= “map”></div>
-
-Home.ts
 
 To import component add ViewChild, ElementRef
 Add to the export class HomePage
