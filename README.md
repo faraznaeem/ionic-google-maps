@@ -49,3 +49,26 @@ Now we need to display the map to do that we are going to add a function
 ```
 You will probably get an error for google, to resolve that you need to add
 `declare var google: any;` below the imports.
+
+Next we need to set up map options
+
+Add
+```
+const options = {center: location, zoom: 15}
+```
+to the `showMap()` function.
+
+Then add
+```
+this.map = new google.maps.Map(this.mapRef.nativeElement, options);
+```
+to the `showMap()` function.
+
+Next add `this.showMap()` to the `ionViewDidLoad` and delete the `console.log`
+
+Your code should look like this:
+```
+ionViewDidLoad() {
+  this.showMap();
+}
+```
