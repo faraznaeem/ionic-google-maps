@@ -13,6 +13,9 @@ At: https://developers.google.com/maps/documentation/javascript/get-api-key
 Go to `index.html` and add
 ``<script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY" async defer></script>``
 
+### Step 3
+Go to `home.html` and remove the content between `<ion-content>` and ad `<div #map id="map"></div>
+`
 
 
 
